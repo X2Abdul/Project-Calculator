@@ -1,0 +1,88 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    background-color: black;
+    width: 400px;
+    height: 700px;
+    margin-top: 100px;
+    align-items: center;
+    border-radius: 50px;
+}
+
+
+.screen{
+    border-radius: 30px;
+    margin-top: 30px;
+    background-color:black;
+    width: 400px;
+    height: 100px;
+}
+
+.buttons{
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.btn{
+    font-size: xx-large;
+    font-weight: bolder;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    padding: 32px;
+    border-radius: 50px;
+    width: 20px;
+    height: 20px;
+    transition-duration: 0.7s;
+}
+
+.btn:hover{
+    cursor: pointer;
+    scale: 1.1;
+}
+
+
+#zero{
+    padding-top: 32px;
+    padding-left: 40px;
+    padding-bottom: 32px;
+    padding-right: 120px;
+}
+
+.remove, #modulas{
+    background-color: #D4D4D2;
+    color: black;
+}
+
+.operators{
+    background-color: #FF9500;
+    color: white;
+}
+
+.number{
+    background-color: #505050;
+    color: white;
+}
+
+.screenText{
+    margin-right: 40px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    color: white;
+    font-size: xxx-large;
+    text-align: right;
+    font-weight: bolder;
+}
+
+.operators{
+    font-weight:bolder;
+    font-size: xx-large;
+}
+
