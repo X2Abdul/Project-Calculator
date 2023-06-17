@@ -23,7 +23,7 @@ main{
 }
 
 .buttons{
-    margin-top: 70px;
+    margin-top: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,7 +76,7 @@ main{
     align-items: center;
     justify-content: end;
     color: white;
-    font-size: xxx-large;
+    font-size: 60px;
     text-align: right;
     font-weight: bolder;
 }
