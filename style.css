@@ -2,6 +2,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: Helvetica;
 }
 
 main{
@@ -31,7 +32,6 @@ main{
 }
 .btn{
     font-size: xx-large;
-    font-weight: bolder;
     margin-left: 10px;
     margin-bottom: 10px;
     padding: 32px;
