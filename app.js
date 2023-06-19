@@ -56,7 +56,7 @@ const evaluate = function(output){
     const operatorList = ['+','−', '×', '÷', '%'];
     let number = '';
     for(let i = 0; i < output.length; i++){
-      if(numList.includes(output[i])){
+      if(numList.includes(output[i]) || output[i] === '.'){
         number += output[i];
       } else if(operatorList.includes(output[i])){
         operandStack.push(number);
@@ -72,6 +72,9 @@ const evaluate = function(output){
     }
     operandStack.reverse();
     operatorStack.reverse();
+
+    console.log(operandStack);
+    console.log(operatorStack);
     
     let operand1 = '';
     let operand2 = '';
@@ -83,12 +86,20 @@ const evaluate = function(output){
         operand2 = operandStack.pop();
         operator = operatorStack.pop();
       }else{
-        operand1 = finalAns.toString();
+        operand1 = String(finalAns);
+        
         operand2 = operandStack.pop();
         operator = operatorStack.pop();
       }
-      
-      finalAns = operate(operator, parseInt(operand1), parseInt(operand2));
+      if(operand1.includes('.') && operand2.includes('.')){
+        finalAns = operate(operator, parseFloat(operand1), parseFloat(operand2));
+      }else if(operand1.includes('.')){
+        finalAns = operate(operator, parseFloat(operand1), parseInt(operand2));
+      }else if(operand2.includes('.')){
+        finalAns = operate(operator, parseInt(operand1), parseFloat(operand2));
+      }else{
+        finalAns = operate(operator, parseInt(operand1), parseInt(operand2));
+      }
       
       console.log(operand1 + operator + operand2 + " = " + operate(operator, parseInt(operand1), parseInt(operand2)));
     }
